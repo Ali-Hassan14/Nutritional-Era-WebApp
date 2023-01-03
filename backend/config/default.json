@@ -1,4 +1,4 @@
 {
-    "mongoURI":"mongodb+srv://alihassan1407:Hassan140@nutritionalera.g9ughbo.mongodb.net/?retryWrites=true&w=majority",
+    "mongoURI":"mongodb+srv://alihassan1407:Hassan140@nutritionalera.g9ughbo.mongodb.net/test?retryWrites=true&w=majority",
     "jwtSecret": "NutritionalEraToken"
 }

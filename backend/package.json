@@ -4,7 +4,8 @@
   "description": "Nutritional Era Web App (Bootcamp Project)",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "nodemon server.js"
   },
   "author": "Ali Hassan",
   "license": "MIT",
@@ -17,6 +18,7 @@
     "gravatar": "^1.8.2",
     "jsonwebtoken": "^9.0.0",
     "mongoose": "^6.8.2",
+    "normalize": "^0.3.1",
     "request": "^2.88.2"
   },
   "devDependencies": {

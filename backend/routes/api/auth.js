@@ -46,7 +46,7 @@ try{
     };
     jwt.sign(
         payload, config.get('jwtSecret'),
-        { expiresIn:'36000'},(err, token)=>{
+        { expiresIn:'1 d'},(err, token)=>{
             if(err) throw err;
             res.json({token});
         });

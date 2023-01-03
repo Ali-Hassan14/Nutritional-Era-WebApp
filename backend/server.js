@@ -1,13 +1,14 @@
 const express = require('express');
-const { connect } = require('http2');
+// const { connect } = require('http2');
 const connectDB = require('./config/DB');
 const app = express();
 const PORT = process.env.PORT || 5000;
-const db=require('./config/DB')
+// const db=require('./config/DB')
 
 // <!!!!!!!!!!!!.............Connect Database................!!!!!!!!!>
 
 connectDB();
+
 
 // <!!!!!!!!!!!!.............Init Middle Ware................!!!!!!!!!>
 
