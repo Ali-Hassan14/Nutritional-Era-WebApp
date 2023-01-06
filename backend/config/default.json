@@ -1,4 +1,7 @@
 {
-    "mongoURI":"mongodb+srv://alihassan1407:Hassan140@nutritionalera.g9ughbo.mongodb.net/test?retryWrites=true&w=majority",
-    "jwtSecret": "NutritionalEraToken"
+    "mongoURI1":"mongodb+srv://alihassan1407:Hassan140@nutritionalera.g9ughbo.mongodb.net/test?retryWrites=true&w=majority",
+    "mongoURI2":"mongodb://alihassan1407:Hassan140@ac-lfjgshv-shard-00-00.g9ughbo.mongodb.net:27017,ac-lfjgshv-shard-00-01.g9ughbo.mongodb.net:27017,ac-lfjgshv-shard-00-02.g9ughbo.mongodb.net:27017/test?ssl=true&replicaSet=atlas-3tcg1f-shard-0&authSource=admin&retryWrites=true&w=majority",
+    "jwtSecret": "NutritionalEraToken",
+    "profileId":" ",
+    "getProfileSecret":" "
 }

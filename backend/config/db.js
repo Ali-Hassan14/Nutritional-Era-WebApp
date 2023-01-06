@@ -10,14 +10,15 @@
 
 const mongoose = require('mongoose');
 const config = require('config');
-const db = config.get('mongoURI');
+const db = config.get('mongoURI2');
 //mongoose.connect(db);
 // console.log(db)
 //mongodb+srv://alihassan1407:Hassan140@nutritionalera.g9ughbo.mongodb.net/test?retryWrites=true&w=majority
-//mongodb+srv://alihassan1407:Hassan140@nutritionalera.g9ughbo.mongodb.net/?retryWrites=true&w=majority
+//'mongodb://alihassan1407:Hassan140@ac-lfjgshv-shard-00-00.g9ughbo.mongodb.net:27017,ac-lfjgshv-shard-00-01.g9ughbo.mongodb.net:27017,ac-lfjgshv-shard-00-02.g9ughbo.mongodb.net:27017/test?ssl=true&replicaSet=atlas-3tcg1f-shard-0&authSource=admin&retryWrites=true&w=majority'
 const connectDB = async () => {
     try{
-        await mongoose.connect(db, {
+        await mongoose.connect(db,
+        {
             useNewUrlParser: true,
         });
         console.log("Mongo DB is connected")

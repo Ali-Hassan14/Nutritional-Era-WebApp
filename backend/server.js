@@ -17,7 +17,7 @@ app.use(express.json({extended:false}))
 // <!!!!!!!!!!!!.............Define Routes................!!!!!!!!!>
 app.use('/api/users',require('./Routes/api/users'));
 app.use('/api/auth',require('./Routes/api/auth'));
-// app.use('/api/posts',require('./Routes/api/posts'));
+app.use('/api/posts',require('./Routes/api/posts'));
 app.use('/api/profile',require('./Routes/api/profile'));
 
 app.get('/',(req,res)=>res.send('Api is Working Fine...!'));
