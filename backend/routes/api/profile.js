@@ -6,6 +6,7 @@ const User=require('../../models/User');
 const {check , validationResult} = require('express-validator');
 const normalize = require('normalize')
 const checkObjectId=require('../../middleware/checkObjectId')
+const config=require('config')
 // <!!!!!!!!!!........ Get Current User Profile...............!!!!!!!!!!>
 
 router.get('/me',auth,async (req,res) => {
