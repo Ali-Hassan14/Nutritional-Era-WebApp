@@ -4,8 +4,11 @@
   "description": "Nutritional Era Web App (Bootcamp Project)",
   "main": "server.js",
   "scripts": {
+    "start": "node server",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "server": "nodemon server.js"
+    "server": "nodemon server.js",
+    "nutritional-era":" npm start --prefix nutritional-era",
+    "dev":"concurrently \"npm run server\" \"npm run nutritional-era\""
   },
   "author": "Ali Hassan",
   "license": "MIT",
