@@ -7,7 +7,7 @@ var gravatar = require('gravatar');
 const config=require('config')
 // const { exists } = require('../../models/Users.Js');
 const User=require('../../models/User')
-router.post('/',check('name','Name is requires').not().isEmpty(),
+router.post('/',check('uname','Name is requires').not().isEmpty(),
 check('email','Email is required, Enter valid Email Address').isEmail(),
 check('password','Please Enter a password with 6 or more characters').isLength({min:6})
 , 
@@ -16,7 +16,7 @@ async(req,res) => {
    if(!errors.isEmpty()){
         return res.status(400).json({errors:errors.array()})
    }
-   const {name,email,password}=req.body;
+   const {uname,email,password}=req.body;
 try{
     //   <!!!!!!!!!........... See if User Exists..............!!!!!!!!!!>
     let user=await User.findOne({email});
@@ -31,7 +31,7 @@ const avatar=gravatar.url(email,{
 })
 
     user=new User({
-        name,
+        uname,
         email, 
         avatar,
         password

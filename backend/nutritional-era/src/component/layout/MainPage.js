@@ -1,5 +1,5 @@
-import React from 'react'
-
+import React from 'react';
+import { Link } from 'react-router-dom';
 const MainPage = () => {
   return (
     <section className="landing">
@@ -12,8 +12,8 @@ const MainPage = () => {
             Create a profile/portfolio as a Nutritionist, share posts and be helpful for community members
           </p>
           <div className="buttons">
-            <a href="register.html" className="btn btn-primary">Sign Up</a>
-            <a href="login.html" className="btn btn-light">Login</a>
+            <Link to="/register" className="btn btn-primary">Sign Up</Link>
+            <Link to="/login" className="btn btn-light">Login</Link>
           </div>
         </div>
       </div>

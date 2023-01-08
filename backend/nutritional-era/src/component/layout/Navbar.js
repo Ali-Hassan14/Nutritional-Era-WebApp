@@ -1,15 +1,16 @@
 import React from 'react'
-import mylogo from '../../img/logo.png'
+import {Link} from 'react-router-dom';
+// import mylogo from '../../img/logo.png'
 const Navbar = () => {
   return (
-    <nav class="navbar bg-dark">
+    <nav className="navbar bg-dark">
       <h1>
-        <a href="index.html"><i class="fa-brands fa-apple"></i> Nutritional Era</a>
+        <Link to="/"><i className="fa-brands fa-apple"></i> Nutritional Era</Link>
       </h1>
       <ul>
-        <li><a href="profiles.html">Nutritionist</a></li>
-        <li><a href="register.html">Register</a></li>
-        <li><a href="login.html">Login</a></li>
+        <li><Link to="/profiles">Nutritionist</Link></li>
+        <li><Link to="/register">Register</Link></li>
+        <li><Link to="/login">Login</Link></li>
       </ul>
     </nav>
   )
