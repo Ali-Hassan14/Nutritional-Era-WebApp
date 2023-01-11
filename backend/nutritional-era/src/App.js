@@ -5,12 +5,14 @@ import Navbar from "./component/layout/Navbar";
 import MainPage from "./component/layout/MainPage";
 import Register from "./component/auth/Register";
 import Login from "./component/auth/Login";
+import ProfileForm from "./component/profile-form/CreateProfile"
 import Alert from "./component/layout/Alert";
-//Redux
 import { Provider } from "react-redux";
 import store from "./store";
 import { loadUser } from "./actions/auth";
 import setAuthToken from "./utils/setAuthToken";
+import Dashboard from "./component/dashboard/Dashboard";
+import PrivateRoute from "./component/routing/PrivateRoute";
 
     if(localStorage.token){
         setAuthToken(localStorage.token);
@@ -29,6 +31,11 @@ const App = () => {
                 <Route path="/" element={<MainPage />} />
                 <Route path="/register" element={<Register />} />
                 <Route path="/login" element={<Login />} />
+                <Route
+            path="dashboard"
+            element={<PrivateRoute component={Dashboard} />}
+          />
+                 <Route path="create-profile"element={<PrivateRoute component={ProfileForm} />}/>
             </Routes>
         </Router>
     </Provider>

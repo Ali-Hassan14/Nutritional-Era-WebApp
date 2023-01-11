@@ -32,7 +32,7 @@ export default function authReducer(state=initialState,action){
                 isAuthenticated:true,
                 loading:false
             };
-       case REGISTER_FAILURE:
+        case REGISTER_FAILURE:
         case AUTH_ERROR:
         case LOGIN_FAILURE:
         case LOGOUT:
