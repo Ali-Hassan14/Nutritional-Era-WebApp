@@ -5,7 +5,7 @@ const bcrypt=require('bcryptjs');
 const jwt =require('jsonwebtoken')
 var gravatar = require('gravatar');
 const config=require('config')
-// const { exists } = require('../../models/Users.Js');
+//  const { exists } = require('../../models/User.js');
 const User=require('../../models/User')
 router.post('/',check('uname','Name is requires').not().isEmpty(),
 check('email','Email is required, Enter valid Email Address').isEmail(),

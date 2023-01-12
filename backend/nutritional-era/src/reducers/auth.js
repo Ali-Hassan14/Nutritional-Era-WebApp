@@ -1,10 +1,11 @@
 import { 
     REGISTER_SUCCESS, 
-    REGISTER_FAILURE, 
+    // REGISTER_FAILURE, 
     USER_LOADED, 
     AUTH_ERROR,
     LOGIN_SUCCESS, 
-    LOGIN_FAILURE,
+    // LOGIN_FAILURE,
+    ACCOUNT_DELETED,
     LOGOUT
     } from "../actions/types";
 const initialState = {
@@ -32,9 +33,10 @@ export default function authReducer(state=initialState,action){
                 isAuthenticated:true,
                 loading:false
             };
-        case REGISTER_FAILURE:
+        // case REGISTER_FAILURE:
+        // case LOGIN_FAILURE:
         case AUTH_ERROR:
-        case LOGIN_FAILURE:
+        case ACCOUNT_DELETED:
         case LOGOUT:
             localStorage.removeItem('token');
             return{

@@ -3,7 +3,7 @@ import {
     PROFILE_ERROR,
      CLEAR_PROFILE,
      UPDATE_PROFILE,
-    // GET_PROFILES,
+     GET_PROFILES,
     // GET_PORTFOLIO,
     // NO_PORTFOLIO
   } from '../actions/types';
@@ -27,12 +27,12 @@ import {
           profile: payload,
           loading: false
         };
-      // case GET_PROFILES:
-      //   return {
-      //     ...state,
-      //     profiles: payload,
-      //     loading: false
-      //   };
+      case GET_PROFILES:
+        return {
+          ...state,
+          profiles: payload,
+          loading: false
+        };
       case PROFILE_ERROR:
         return {
           ...state,
