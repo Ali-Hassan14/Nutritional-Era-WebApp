@@ -150,7 +150,8 @@ const initialState = {
             onChange={onChange}
           />
           <small className="form-text">
-            Please use comma separated values (eg. HTML,CSS,JavaScript,PHP)
+            Please use comma separated values (eg. Dietitian, Nutritionist, Child Nutrition Speciality
+            )
           </small>
         </div>
         <div className="form-group">

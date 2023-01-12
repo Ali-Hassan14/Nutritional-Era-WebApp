@@ -82,7 +82,7 @@ router.post(
       let profile = await Profile.findOneAndUpdate(
         { user: req.user.id },
         { $set: profileFields },
-        //{ new: true, upsert: true, setDefaultsOnInsert: true }
+        { new: true, upsert: true, setDefaultsOnInsert: true }
       );
       return res.json(profile);
     } catch (err) {
@@ -96,7 +96,7 @@ router.post(
 // @access   Public
 router.get('/', async (req, res) => {
   try {
-    const profiles = await Profile.find().populate('user', ['name', 'avatar']);
+    const profiles = await Profile.find().populate('user', ['uname', 'avatar']);
     res.json(profiles);
   } catch (err) {
     console.error(err.message);
@@ -114,7 +114,7 @@ router.get(
     try {
       const profile = await Profile.findOne({
         user: user_id
-      }).populate('user', ['name', 'avatar']);
+      }).populate('user', ['uname', 'avatar']);
 
       if (!profile) return res.status(400).json({ msg: 'Profile not found' });
 

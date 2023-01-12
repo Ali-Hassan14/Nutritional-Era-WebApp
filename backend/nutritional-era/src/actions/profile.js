@@ -5,8 +5,8 @@ import {
   GET_PROFILE,
 //   GET_PROFILES,
   PROFILE_ERROR,
-//   UPDATE_PROFILE,
-//   CLEAR_PROFILE,
+  UPDATE_PROFILE,
+  CLEAR_PROFILE,
 //   ACCOUNT_DELETED,
 //   GET_PORTFOLIO,
 //   NO_PORTFOLIO
@@ -123,58 +123,58 @@ export const createProfile =
   };
 
 // Add Experience
-// export const addExperience = (formData, navigate) => async (dispatch) => {
-//   try {
-//     const res = await api.put('/profile/experience', formData);
+export const addExperience = (formData, navigate) => async (dispatch) => {
+  try {
+    const res = await api.put('/profile/experience', formData);
 
-//     dispatch({
-//       type: UPDATE_PROFILE,
-//       payload: res.data
-//     });
+    dispatch({
+      type: UPDATE_PROFILE,
+      payload: res.data
+    });
 
-//     dispatch(setAlert('Experience Added', 'success'));
+    dispatch(setAlert('Experience Added', 'success'));
 
-//     navigate('/dashboard');
-//   } catch (err) {
-//     const errors = err.response.data.errors;
+    navigate('/dashboard');
+  } catch (err) {
+    const errors = err.response.data.errors;
 
-//     if (errors) {
-//       errors.forEach((error) => dispatch(setAlert(error.msg, 'danger')));
-//     }
+    if (errors) {
+      errors.forEach((error) => dispatch(setAlert(error.msg, 'danger')));
+    }
 
-//     dispatch({
-//       type: PROFILE_ERROR,
-//       payload: { msg: err.response.statusText, status: err.response.status }
-//     });
-//   }
-// };
+    dispatch({
+      type: PROFILE_ERROR,
+      payload: { msg: err.response.statusText, status: err.response.status }
+    });
+  }
+};
 
 // Add Education
-// export const addEducation = (formData, navigate) => async (dispatch) => {
-//   try {
-//     const res = await api.put('/profile/education', formData);
+export const addEducation = (formData, navigate) => async (dispatch) => {
+  try {
+    const res = await api.put('/profile/education', formData);
 
-//     dispatch({
-//       type: UPDATE_PROFILE,
-//       payload: res.data
-//     });
+    dispatch({
+      type: UPDATE_PROFILE,
+      payload: res.data
+    });
 
-//     dispatch(setAlert('Education Added', 'success'));
+    dispatch(setAlert('Education Added', 'success'));
 
-//     navigate('/dashboard');
-//   } catch (err) {
-//     const errors = err.response.data.errors;
+    navigate('/dashboard');
+  } catch (err) {
+    const errors = err.response.data.errors;
 
-//     if (errors) {
-//       errors.forEach((error) => dispatch(setAlert(error.msg, 'danger')));
-//     }
+    if (errors) {
+      errors.forEach((error) => dispatch(setAlert(error.msg, 'danger')));
+    }
 
-//     dispatch({
-//       type: PROFILE_ERROR,
-//       payload: { msg: err.response.statusText, status: err.response.status }
-//     });
-//   }
-// };
+    dispatch({
+      type: PROFILE_ERROR,
+      payload: { msg: err.response.statusText, status: err.response.status }
+    });
+  }
+};
 
 // Delete experience
 // export const deleteExperience = (id) => async (dispatch) => {
