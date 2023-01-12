@@ -8,8 +8,8 @@ import {
   UPDATE_PROFILE,
   CLEAR_PROFILE,
   ACCOUNT_DELETED,
-//   GET_PORTFOLIO,
-//   NO_PORTFOLIO
+  GET_PORTFOLIO,
+  NO_PORTFOLIO
 } from './types';
 
 // Get current users profile
@@ -65,21 +65,21 @@ export const getProfileById = (userId) => async (dispatch) => {
 };
 
 // Get External Portfolio
-// export const getPortfolio = (username) => async (dispatch) => {
-//   try {
-//     const res = await api.get(`/profile/portfolio/${username}`);
+export const getPortfolio = (username) => async (dispatch) => {
+  try {
+    const res = await api.get(`/profile/portfolioSite/${username}`);
 
-//     dispatch({
-//       type: GET_PORTFOLIO
-//       ,
-//       payload: res.data
-//     });
-//   } catch (err) {
-//     dispatch({
-//       type: NO_PORTFOLIO
-//     });
-//   }
-// };
+    dispatch({
+      type: GET_PORTFOLIO
+      ,
+      payload: res.data
+    });
+  } catch (err) {
+    dispatch({
+      type: NO_PORTFOLIO
+    });
+  }
+};
 
 // Create or update profile
 export const createProfile =

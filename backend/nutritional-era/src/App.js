@@ -9,12 +9,16 @@ import ProfileForm from "./component/profile-form/CreateProfile"
 import AddEducation from "./component/profile-form/AddEducation";
 import AddExperience from "./component/profile-form/AddExperience";
 import Alert from "./component/layout/Alert";
+import Dashboard from "./component/dashboard/Dashboard";
+import PrivateRoute from "./component/routing/PrivateRoute";
+import Profiles from "./component/profiles/Profiles";
+import Profile from "./component/profile/Profile";
+
+//!!!!!!!!!!!!!!!..................Redux.............!!!!!!!!!!!!!!!!!!!!!!
 import { Provider } from "react-redux";
 import store from "./store";
 import { loadUser } from "./actions/auth";
 import setAuthToken from "./utils/setAuthToken";
-import Dashboard from "./component/dashboard/Dashboard";
-import PrivateRoute from "./component/routing/PrivateRoute";
 
     if(localStorage.token){
         setAuthToken(localStorage.token);
@@ -33,6 +37,8 @@ const App = () => {
                 <Route path="/" element={<MainPage />} />
                 <Route path="/register" element={<Register />} />
                 <Route path="/login" element={<Login />} />
+                <Route path="profiles" element={<Profiles />} />
+                <Route path="profile/:id" element={<Profile />} />
                 <Route
             path="dashboard"
             element={<PrivateRoute component={Dashboard} />}

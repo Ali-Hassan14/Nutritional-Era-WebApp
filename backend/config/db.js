@@ -9,8 +9,9 @@
 // });
 
 const mongoose = require('mongoose');
+mongoose.set("strictQuery", false);
 const config = require('config');
-const db = config.get('mongoURI2');
+const db = config.get('mongoURI1');
 //mongoose.connect(db);
 // console.log(db)
 //mongodb+srv://alihassan1407:Hassan140@nutritionalera.g9ughbo.mongodb.net/test?retryWrites=true&w=majority

@@ -1,11 +1,11 @@
 import {
     GET_PROFILE,
     PROFILE_ERROR,
-     CLEAR_PROFILE,
-     UPDATE_PROFILE,
-     GET_PROFILES,
-    // GET_PORTFOLIO,
-    // NO_PORTFOLIO
+    CLEAR_PROFILE,
+    UPDATE_PROFILE,
+    GET_PROFILES,
+    GET_PORTFOLIO,
+    NO_PORTFOLIO
   } from '../actions/types';
   
   const initialState = {
@@ -46,17 +46,17 @@ import {
           profile: null,
           repos: []
         };
-  //     case GET_PORTFOLIO:
-  //       return {
-  //         ...state,
-  //         repos: payload,
-  //         loading: false
-  //       };
-  //     case NO_PORTFOLIO:
-  //       return {
-  //         ...state,
-  //         repos: []
-  //       };
+      case GET_PORTFOLIO:
+        return {
+          ...state,
+          repos: payload,
+          loading: false
+        };
+      case NO_PORTFOLIO:
+        return {
+          ...state,
+          repos: []
+        };
       default:
         return state;
     }
