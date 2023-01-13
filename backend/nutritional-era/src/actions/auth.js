@@ -2,13 +2,12 @@ import api from '../utils/api';
 import { setAlert } from './alert';
 import {
   REGISTER_SUCCESS,
-  REGISTER_FAILURE,
+  REGISTER_FAIL,
   USER_LOADED,
   AUTH_ERROR,
   LOGIN_SUCCESS,
-  LOGIN_FAILURE,
-  LOGOUT,
-  CLEAR_PROFILE
+  LOGIN_FAIL,
+  LOGOUT
 } from './types';
 
 /*
@@ -52,7 +51,7 @@ export const register = (formData) => async (dispatch) => {
     }
 
     dispatch({
-      type: REGISTER_FAILURE
+      type: REGISTER_FAIL
     });
   }
 };
@@ -78,13 +77,10 @@ export const login = (email, password) => async (dispatch) => {
     }
 
     dispatch({
-      type: LOGIN_FAILURE
+      type: LOGIN_FAIL
     });
   }
 };
 
 // Logout
-export const logout = () => dispatch =>{
-dispatch ({ type: LOGOUT });
-dispatch({type:CLEAR_PROFILE})
-}
+export const logout = () => ({ type: LOGOUT });

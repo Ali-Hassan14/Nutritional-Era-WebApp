@@ -11,12 +11,11 @@ import {
   REMOVE_COMMENT
 } from './types';
 
-
 // Get posts
 export const getPosts = () => async (dispatch) => {
   try {
     const res = await api.get('/posts');
-
+    // console.log(res.data)
     dispatch({
       type: GET_POSTS,
       payload: res.data
