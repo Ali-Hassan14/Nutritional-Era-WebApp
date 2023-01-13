@@ -13,8 +13,9 @@ import Dashboard from "./component/dashboard/Dashboard";
 import PrivateRoute from "./component/routing/PrivateRoute";
 import Profiles from "./component/profiles/Profiles";
 import Profile from "./component/profile/Profile";
-import Posts from './components/posts/Posts';
-
+import Posts from "./component/posts/Posts";
+import Post from "./component/post/Post";
+import NotFound from "./component/layout/NotFound";
 //!!!!!!!!!!!!!!!..................Redux.............!!!!!!!!!!!!!!!!!!!!!!
 import { Provider } from "react-redux";
 import store from "./store";
@@ -36,16 +37,18 @@ const App = () => {
             <Alert/>
             <Routes>
                 <Route path="/" element={<MainPage />} />
-                <Route path="register" element={<Register />} />
-                <Route path="login" element={<Login />} />
-                <Route path="profiles" element={<Profiles />} />
-                <Route path="profile/:id" element={<Profile />} />
-                <Route path="dashboard" element={<PrivateRoute component={Dashboard} />} />
-                <Route path="create-profile"element={<PrivateRoute component={ProfileForm} />}/>
-                <Route path="edit-profile" element={<PrivateRoute component={ProfileForm} />}/>
-                <Route path="add-experience" element={<PrivateRoute component={AddExperience} />}/>
-                <Route path="add-education" element={<PrivateRoute component={AddEducation} />}/>
-                <Route path="posts" element={<PrivateRoute component={Posts} />} />
+                <Route path="/register" element={<Register />} />
+                <Route path="/login" element={<Login />} />
+                <Route path="/profiles" element={<Profiles />} />
+                <Route path="/profile/:id" element={<Profile />} />
+                <Route path="/dashboard" element={<PrivateRoute component={Dashboard} />} />
+                <Route path="/create-profile"element={<PrivateRoute component={ProfileForm} />}/>
+                <Route path="/edit-profile" element={<PrivateRoute component={ProfileForm} />}/>
+                <Route path="/add-experience" element={<PrivateRoute component={AddExperience} />}/>
+                <Route path="/add-education" element={<PrivateRoute component={AddEducation} />}/>
+                <Route path="/posts" element={<PrivateRoute component={Posts} />} />
+                <Route path="/posts/:id" element={<PrivateRoute component={Post} />} />
+                <Route path="/*" element={<NotFound />} />
             </Routes>
         </Router>
     </Provider>
