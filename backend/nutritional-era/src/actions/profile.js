@@ -8,8 +8,8 @@ import {
   UPDATE_PROFILE,
   CLEAR_PROFILE,
   ACCOUNT_DELETED,
-  GET_REPOS,
-  NO_REPOS
+  GET_PORTFOLIO,
+  NO_PORTFOLIO
 } from './types';
 
 /*
@@ -72,18 +72,18 @@ export const getProfileById = (userId) => async (dispatch) => {
   }
 };
 
-// Get Github repos
+// Get Github PORTFOLIO
 export const getPortfolio = (username) => async (dispatch) => {
   try {
     const res = await api.get(`/profile/github/${username}`);
 
     dispatch({
-      type: GET_REPOS,
+      type: GET_PORTFOLIO,
       payload: res.data
     });
   } catch (err) {
     dispatch({
-      type: NO_REPOS
+      type: NO_PORTFOLIO
     });
   }
 };

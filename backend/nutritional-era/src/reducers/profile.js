@@ -4,14 +4,14 @@ import {
   CLEAR_PROFILE,
   UPDATE_PROFILE,
   GET_PROFILES,
-  GET_REPOS,
-  NO_REPOS
+  GET_PORTFOLIO,
+  NO_PORTFOLIO
 } from '../actions/types';
 
 const initialState = {
   profile: null,
   profiles: [],
-  repos: [],
+  portfolio: [],
   loading: true,
   error: {}
 };
@@ -44,18 +44,18 @@ function profileReducer(state = initialState, action) {
       return {
         ...state,
         profile: null,
-        repos: []
+        portfolio: []
       };
-    case GET_REPOS:
+    case GET_PORTFOLIO:
       return {
         ...state,
-        repos: payload,
+        portfolio: payload,
         loading: false
       };
-    case NO_REPOS:
+    case NO_PORTFOLIO:
       return {
         ...state,
-        repos: []
+        portfolio: []
       };
     default:
       return state;
