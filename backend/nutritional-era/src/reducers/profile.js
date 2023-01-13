@@ -44,7 +44,7 @@ import {
         return {
           ...state,
           profile: null,
-          repos: []
+          portfolio: []
         };
       case GET_PORTFOLIO:
         return {
@@ -55,7 +55,7 @@ import {
       case NO_PORTFOLIO:
         return {
           ...state,
-          repos: []
+          portfolio: []
         };
       default:
         return state;
